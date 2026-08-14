@@ -38,14 +38,23 @@ An interactive Power BI dashboard analyzing **51,290 orders across 147 countries
 ├── data/
 
 │ └── global_superstore_orders.csv
+
 ├── dashboard/
+
 │ └── global_superstore.pbix
+
 ├── scripts/
+
 │ └── background_generator.py
+
 ├── images/
+
 │ ├── executive_overview.png
+
 │ ├── regional_deepdive.png
+
 │ └── decomposition_tree.png
+
 └── README.md
 
 ## 🚀 How to Run
