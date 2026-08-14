@@ -36,6 +36,7 @@ An interactive Power BI dashboard analyzing **51,290 orders across 147 countries
 ## 📁 Repo Structure
 
 ├── data/
+
 │ └── global_superstore_orders.csv
 ├── dashboard/
 │ └── global_superstore.pbix
