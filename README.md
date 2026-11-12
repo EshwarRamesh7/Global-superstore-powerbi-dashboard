@@ -1,69 +1,65 @@
-# 🛍️ Global Superstore Performance Dashboard
+# Global Retail Performance Dashboard
 
-## 📌 Overview
-An interactive Power BI dashboard analyzing **51,290 orders across 147 countries** for a global retail superstore (2011–2014), covering sales performance, profitability, and regional trends — built with custom DAX time-intelligence measures and a fully custom visual theme.
+A three-page Power BI dashboard exploring sales, profitability, discounting and geographic performance across a global retail dataset.
 
-## 🎯 Business Objective
-- Track sales and profit performance across markets, regions, and product categories
-- Surface year-over-year growth and margin trends using time-intelligence comparisons
-- Identify underperforming categories/regions dragging down profitability
-- Give decision-makers a drillable view from global performance down to individual order priority
+**Tools:** Power BI · DAX · Power Query · Python (PIL)
 
-## 🗂️ Dataset
-**Source:** Global Superstore dataset — public e-commerce sample dataset
-**Size:** 51,290 orders | 2011–2014 | 147 countries across 7 markets (Africa, APAC, EU, EMEA, LATAM, US, Canada)
+## Business question
 
-**Key fields:** order/ship dates, ship mode, customer segment, market/region, product category & sub-category, sales, quantity, discount, profit, shipping cost, order priority
+How can retail leaders monitor growth while identifying products, markets and discount patterns that weaken profitability?
 
-## ⚙️ Tools & Technologies
-`Power BI` · `DAX` · `Python (PIL)` for custom visual assets
+## Dataset
 
-## 🛠️ Build Highlights
-- **Custom DAX time-intelligence** — used `SAMEPERIODLASTYEAR` and related functions to build true year-over-year comparisons
-- **Custom gradient background** — generated programmatically in Python (PIL) for a distinct visual identity instead of a default Power BI theme
-- **Three-page dashboard** structured for a top-down analysis flow:
-  1. **Executive Overview** — KPI cards, sales/profit trend line, category split, global footprint map
-  2. **Sales & Profitability Trends** — monthly heatmap, discount-vs-profit analysis, decomposition tree for root-cause profit drivers
-  3. **Geographic Deep-Dive** — market/region/country breakdown with profit margin ranking
+- Global Superstore sample dataset covering 2011–2014.
+- 51,290 transaction rows across 147 countries and seven market groupings.
+- Fields include order and shipping dates, customer segment, market and region, product category, sales, quantity, discount, profit, shipping cost and order priority.
 
-## 🖼️ Dashboard Preview
-![Executive Overview](images/executive_overview.png)
-![Sales & Profitability Trends](images/regional_deepdive.png)
-![Geographic Deep-Dive](images/decomposition_tree.png)
+The 51,290 figure is a transaction-row count. It should not automatically be described as the number of unique orders.
 
-## 💡 Key Insights
-- **$12.64M in total sales, $1.47M profit** (11.6% margin) across 25K orders — sales nearly doubled from $2.3M (2011) to $4.3M (2014)
-- **Margin slipped slightly even as sales grew** — profit margin declined 0.3 pts YoY, indicating revenue growth outpaced profit growth, largely tied to discounting
-- **China is the most efficient market, not the biggest** — 21.5% profit margin, nearly double the US's 12.5%, on less than a third of the US's sales volume ($7.01M vs $22.97M)
-- **Tables is the only loss-making sub-category** — every other sub-category is profitable; Tables shows a net loss driven by heavy discounting
-- **Furniture is the most discount-sensitive category** — high-discount Furniture orders repeatedly dip into negative profit, more than any other category, signaling a need to tighten discount policy there
-- **US drives the highest absolute profit** ($2.86M), led by Technology — Copiers and Phones are the single strongest profit-generating sub-categories company-wide
+## Dashboard
 
-## 📁 Repo Structure
+1. **Executive overview** — headline sales and profit indicators, time trends, category performance and geographic context.
+2. **Sales and profitability** — time trends, discount-versus-profit patterns and decomposition of profitability drivers.
+3. **Geographic deep dive** — market, region and country comparisons.
 
-├── data/
+## Methods
 
-│ └── global_superstore_orders.csv
+- DAX measures for sales, profit, margin and year-over-year comparisons.
+- Time intelligence using functions such as `SAMEPERIODLASTYEAR`.
+- Drill-down and filtering across product and geographic dimensions.
+- Discount and profit analysis to identify loss-making pockets.
+- Custom visual assets generated with Python/PIL.
 
-├── dashboard/
+## Findings recorded in the project
 
-│ └── global_superstore.pbix
+The original dashboard summary reports approximately **$12.64M in sales**, **$1.47M in profit** and an **11.6% profit margin**. It identifies the Tables sub-category as loss-making and highlights weak profitability in heavily discounted Furniture orders.
 
-├── images/
+**Validation note:** some country-level figures in the earlier README did not reconcile with the global totals. They have been omitted here pending validation against the source CSV and DAX measures. Also, the README's earlier count of 25K orders differs from the 51,290 transaction rows. Use distinct order IDs for order counts.
 
-│ ├── executive_overview.png
+## Dashboard previews
 
-│ ├── regional_deepdive.png
+![Executive overview](images/executive_overview.png)
 
-│ └── decomposition_tree.png
+![Sales and profitability trends](images/regional_deepdive.png)
 
-└── README.md
+![Decomposition tree](images/decomposition_tree.png)
 
-## 🚀 How to Run
-Open `dashboard/global_superstore.pbix` in **Power BI Desktop** (free download from Microsoft). Data source path may need to be repointed to `data/global_superstore_orders.csv` if reopening on a different machine.
+## Repository contents
 
-## 👨‍💻 Author
-**Eshwar Ramesh**
-Aspiring Data Analyst | Power BI Developer
-📧 eshwarramesh1985@gmail.com
-🌐 [github.com/EshwarRamesh7](https://github.com/EshwarRamesh7) · [Portfolio](https://eshwarrameshportfolio.netlify.app)
+- `Superstore Analysis Dashboard.pbix` — interactive Power BI report.
+- `data/SuperStoreOrders.csv` — source transaction data.
+- `images/` — dashboard screenshots.
+- `Superstore analysis.ipynb` — separate exploratory notebook. Its opening cells refer to a Smart Logistics dataset, so it is not described as the dashboard's build notebook.
+- `docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md` — project explanation and interview preparation.
+
+## Run the report
+
+Open `Superstore Analysis Dashboard.pbix` in Power BI Desktop. If prompted, repoint the data source to `data/SuperStoreOrders.csv` and refresh the model.
+
+## Interview preparation
+
+See [Project explanation and interview questions](docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md).
+
+## Author
+
+**Eshwar Ramesh** · [GitHub](https://github.com/EshwarRamesh7) · [Portfolio](https://eshwarrameshportfolio.netlify.app) · [LinkedIn](https://www.linkedin.com/in/eshwar-ramesh-9a4652251)
