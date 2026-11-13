@@ -50,15 +50,11 @@ The original dashboard summary reports approximately **$12.64M in sales**, **$1.
 - `data/SuperStoreOrders.csv` — source transaction data.
 - `images/` — dashboard screenshots.
 - `Superstore analysis.ipynb` — separate exploratory notebook. Its opening cells refer to a Smart Logistics dataset, so it is not described as the dashboard's build notebook.
-- `docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md` — project explanation and interview preparation.
 
 ## Run the report
 
 Open `Superstore Analysis Dashboard.pbix` in Power BI Desktop. If prompted, repoint the data source to `data/SuperStoreOrders.csv` and refresh the model.
 
-## Interview preparation
-
-See [Project explanation and interview questions](docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md).
 
 ## Author
 
